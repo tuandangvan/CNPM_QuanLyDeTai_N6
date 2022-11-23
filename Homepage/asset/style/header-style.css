@@ -1,0 +1,55 @@
+/* Header css */
+html{
+    /* 100%: 16px => 62.5% =10px
+    Vậy cứ 1rem = 10px, như vậy sẽ dễ configure cho mấy đối tượng sau
+     */
+    font-size: 62.5%;
+    line-height: 16px;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+.header{
+    width: auto;
+    height: 19px;
+    left: 0px;
+    top: 0px;
+}
+
+.header, .container{
+    height: 140px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 80px;
+    background-color: #00FFFF;
+}
+
+.header-left {
+    display: flex;
+}
+
+.header-left-logoimg{
+    height: 130px;
+    padding-top: 15px;
+}
+
+.header__container-content{
+    min-height: 97px; /* Làm cho chiều cao bằng với logo*/
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header-right {
+    height: 100%;
+}
+
+.header-right img{
+    width: auto;
+    height: 130px;
+    left: -41px;
+    right: 0;
+    object-fit: fill;
+}
