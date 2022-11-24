@@ -1,0 +1,160 @@
+/* Khởi tạo mấy cái biến */
+:root{
+    --black-color: #000;
+    --white-color: #fff;
+    --navy-color: #008080;
+    --light__blue-color: #ECF8FC;
+    --red-color: #D24767;
+    --orange-color: #F89A56;
+    --footer-size: 13.6rem;
+}
+
+*{
+    box-sizing: inherit;
+}
+
+html{
+    /* 100%: 16px => 62.5% =10px
+    Vậy cứ 1rem = 10px, như vậy sẽ dễ configure cho mấy đối tượng sau
+     */
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    box-direction: border-box;
+    font-family: 'Inter', sans-serif;
+}
+body{
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+h2{
+    font-size: 1.8rem;
+}
+
+h3{
+    font-size: 1.6rem;
+}
+
+
+/* Content: Begin */
+.content{
+    width: auto;
+    padding: 0 20rem;
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 45rem; 
+    box-direction: border-box;
+}
+
+
+/* MENU content: Begin */
+.content__menu{
+    background-color: var(--white-color);
+    border: 2px solid var(--navy-color);
+    box-shadow: 8px 8px 2px rgba(154, 154, 154, 0.25);
+    border-radius: 6px;
+    display: block;
+    box-direction: border-box;
+}
+
+.menu__header{
+    height: 4rem;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    color: var(--navy-color);
+    border-bottom: 0.2rem solid var(--navy-color);
+    border-radius: 0.6rem 0.6rem 0 0;
+    background-color: var(--light__blue-color);
+}
+
+ul{
+    list-style: none;
+    display: block;
+    padding: 0 2.5rem;
+    margin: 2rem 0;
+    font-size: 1.4rem;
+}
+
+ul > li {
+    margin-bottom: 2rem;
+    color: var(--navy-color);
+    width: 20rem;
+    height: 3rem;
+    background-color: var(--light__blue-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0.5rem;
+}
+
+ul > li > a{
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--navy-color);
+}
+
+.menu__nav > li > a > i{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+/* Menu Content: END */
+
+/* content__main: Begin*/
+
+
+
+/* content__main: End */
+/* Content: END */
+.content__main{
+    display: block;
+    height: 100%;
+    margin-left: 2rem;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    box-direction: border-box;
+}
+.content__main__breadcumb{
+    width: 100%;
+    height: 10%;
+    line-height: 4.4rem;
+    background-color: var(--light__blue-color);
+    padding-left: 2rem;
+    color: var(--red-color);
+    box-direction: border-box;
+    border-radius: 6px;
+
+}
+
+.content__main__notify{
+    height: 39.5rem;
+    margin-top: 1rem;
+    border: 2px solid var(--navy-color);
+    box-shadow: 8px 8px 2px rgba(154, 154, 154, 0.25);
+    border-radius: 6px;
+    box-direction: border-box;
+}
+
+.content__main__notify-header{
+    padding-left: 2rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    background-color: var(--navy-color);
+    color: var(--white-color);
+    font-size: 20px;
+}
+
+.bell-icon{
+    color: var(--orange-color);
+    margin-right: 1rem;
+}
