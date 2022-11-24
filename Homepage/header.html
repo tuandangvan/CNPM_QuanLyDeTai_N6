@@ -7,6 +7,7 @@
     <link rel="icon" href="./asset/img/fit-logo.png" type="image/icon type" />
     <title>HomePage</title>
     <link rel="stylesheet" href="./asset/fonts/themify-icons/themify-icons.css">
+    <script src="https://kit.fontawesome.com/18ce1a4b11.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./asset/style/header-style.css">
 
 </head>
@@ -36,7 +37,7 @@
                 </h1>
             </div>
             <div class="login-area">
-                <button class="btn s-full-width js-buy-ticket"><i class="icon-login ti-user"></i>Đăng nhập</button>
+                <button class="btn s-full-width js-login"><i class="icon-login ti-user"></i>Đăng nhập</button>
             </div>
             <div class="header-right">
                 <img src="./asset/img/HCMUTE.jpg" alt="UTE img" class="header-right-img">
@@ -54,5 +55,67 @@
             </div>         
         </div>       
     </header>
+    <div class="modal js-modal-login">
+        <div class="modal-container js-modal-login-container">
+            <div class="modal-close js-modal-close">
+                <i class="ti-close"></i>
+            </div>
+            <header class="modal-header">
+                Đăng nhập
+            </header>
+
+            <div class="modal-body">
+                <label for="ticket-quantity" class="modal-lable">
+                    <i class="fa-sharp fa-solid fa-user"></i>
+                    Tên đăng nhập:
+                </label>
+                <input id="ticket-username" type="text" class="modal-input" placeholder="Tên đăng nhập">
+                <label for="ticket-email" class="modal-lable">
+                    <i class="fa-sharp fa-solid fa-key"></i>
+                    Mật khẩu:
+                </label>
+                <input id="ticket-password" type="text" class="modal-input" placeholder="Mật khẩu">
+                <button id="btn-login">
+                    <i class="fa-sharp fa-solid fa-right-to-bracket"></i> Đăng nhập
+                </button>
+            </div>
+
+            <div class="modal-footer">
+                <a href="" class="modal-footer-forgetPass">Quên mật khẩu</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const loginBtns = document.querySelectorAll('.js-login')
+        const modal = document.querySelector('.js-modal-login')
+        const modalContainer = document.querySelector('.js-modal-login-container')
+        const modalClose = document.querySelector('.js-modal-close')
+        console.log(loginBtns)
+        console.log(modal)
+        console.log(modalContainer)
+        console.log(modalClose)
+        
+        //Hàm hiển thị modal
+        function showFormLogin () {
+            modal.classList.add('open')
+            console.log("Lỗi r")
+        }
+
+        //Hàm tắt modal
+        function hideFormLogin () {
+            modal.classList.remove('open')
+        }
+
+        for (const loginBtn of loginBtns) {
+            loginBtn.addEventListener('click', showFormLogin)
+        }
+
+        modalClose.addEventListener('click', hideFormLogin)
+        modal.addEventListener('click', hideFormLogin)
+        modalContainer.addEventListener('click', function (event) {
+            event.stopPropagation()
+        })
+
+    </script>
 </body>
 </html>
