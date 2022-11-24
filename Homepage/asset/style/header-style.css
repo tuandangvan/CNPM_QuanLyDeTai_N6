@@ -1,4 +1,11 @@
 /* Header css */
+body{
+    margin: 0;
+    font-size: 1rem;
+}
+*{
+    box-sizing: inherit;
+}
 html{
     /* 100%: 16px => 62.5% =10px
     Vậy cứ 1rem = 10px, như vậy sẽ dễ configure cho mấy đối tượng sau
@@ -10,18 +17,19 @@ html{
 }
 .header{
     width: auto;
-    height: 19px;
+    height: 190px;
     left: 0px;
     top: 0px;
+    
 }
 
-.header, .container{
+.container{
     height: 140px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 80px;
+    padding: 10px 100px;
     background-color: #00FFFF;
 }
 
@@ -30,8 +38,9 @@ html{
 }
 
 .header-left-logoimg{
-    height: 130px;
-    padding-top: 15px;
+    width: 110px;
+    height: 125px;
+    padding: 15px;
 }
 
 .header__container-content{
@@ -42,14 +51,95 @@ html{
     justify-content: space-between;
 }
 
+.header-container-content-VNName{
+    line-height: 2.4rem;
+    display: block;
+    margin: 0; 
+    color: #e31414;
+    margin-top: 15px;
+}
+.header-container-content-EnglishName{
+    display: block;
+    margin: 0;
+}
+
+.header-container-content-line{
+    display: block;
+    margin: 0;
+    transform: translateY(-50%); /* Làm cho dòng gạch chân về giữa */
+}
+
+.header-container-content-departmentName{
+    display: block;
+    margin: 0;
+    color: #270ae0;
+    margin-bottom: 15px;
+}
+
+.header-center-content-website{
+    position: absolute;
+    color: #0a1fe0;
+    font-size: 250%;
+    left: 75rem;
+    top: 53px;
+}
 .header-right {
     height: 100%;
 }
 
-.header-right img{
+.header-right-img{
     width: auto;
     height: 130px;
     left: -41px;
     right: 0;
     object-fit: fill;
+}
+
+/* Nac Css */
+.header-nav{
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 4rem;
+    font-size: 1.6rem;
+    background-color: #3B6E9C;
+    border: 0.1rem solid #000;
+}
+.header-nav-home,
+.header-nav-login{
+    display: inline-block;
+}
+
+.header-nav-icon,
+.header-nav-text, 
+.header-nav-text a{
+    display: inline-block;
+    color: #fff;
+}
+/* Buntton Login css */
+.btn {
+    color: #fff;
+    background-color: #4CAF50;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 15px;
+    position: absolute;
+    margin-top: 15px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: center;
+    top: -12px;
+    right: 350px;
+}
+
+.btn:hover {
+    background-color: #92a8d1;
+    color: #000;
+}
+
+.icon-login {
+    margin-right: 3px;
 }
